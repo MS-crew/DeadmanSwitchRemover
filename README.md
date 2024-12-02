@@ -6,7 +6,7 @@
 <a href="https://github.com/ExMod-Team/EXILED"><img src="https://img.shields.io/badge/Exiled-9.0.0Alpha4-red?style=for-the-badge&logo=gitbook" alt="GitHub Exiled"></a> 
 </div>
 
-## DeadmanSwitchRemover
+## Deadman Switch Remover
 
 - **Deadmen Switch Remover:** Remove the deadmen switch in the game.
 
