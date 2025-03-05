@@ -1,4 +1,4 @@
-<h1 align="center">Deadman Switch Remover - DmsR</h1> 
+<h1 align="center">Deadman Switch Remover - Dms Remover</h1> 
 <div align="center">
 <a href="https://github.com/MS-crew/DeadmanSwitchRemover/releases"><img src="https://img.shields.io/github/downloads/MS-crew/DeadmanSwitchRemover/total?style=for-the-badge&logo=githubactions&label=Downloads" alt="GitHub Release Download"></a> <a href="https://github.com/MS-crew/DeadmanSwitchRemover/releases"><img src="https://img.shields.io/badge/Build-1.5.0-brightgreen?style=for-the-badge&logo=gitbook" alt="GitHub Releases"></a> 
 <a href="https://github.com/MS-crew/DeadmanSwitchRemover/blob/master/LICENSE">
