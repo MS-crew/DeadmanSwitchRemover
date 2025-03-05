@@ -29,7 +29,7 @@ Thank you for using our plugin and helping us improve it!
 Default Config
 ```yml
 is_enabled: true
-debug: true
+debug: false
 # Should DMS be permanently disabled?
 permenantly_remove: true
 # How many minutes into the round should DMS remain disabled?
