@@ -8,7 +8,7 @@
 
 ## Deadman Switch Remover
 
-- **Deadmen Switch Remover:** Remove the deadmen switch in the game.
+- **Deadmen Switch Remover:** Removes the Deadman Switch in the game or prevents it from activating until a certain amount of time has passed.
 
 ## Installation
 
@@ -29,5 +29,9 @@ Thank you for using our plugin and helping us improve it!
 Default Config
 ```yml
 is_enabled: true
-debug: false
+debug: true
+# Should DMS be permanently disabled?
+permenantly_remove: true
+# How many minutes into the round should DMS remain disabled?
+delay_minutes: 15
 ```
