@@ -28,6 +28,7 @@ namespace DeadmanSwitchRemover
             }
             base.OnEnabled();
         }
+
         public override void OnDisabled()
         {
             if (!Config.PermenantlyRemove) 
