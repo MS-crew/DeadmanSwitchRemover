@@ -11,7 +11,7 @@ namespace DeadmanSwitchRemover
         public override string Name => "DmsRemover";
         public override string Prefix => "DmsRemover";
         public override Version RequiredExiledVersion { get; } = new Version(9, 5, 1);
-        public override Version Version { get; } = new Version(1, 5, 0);
+        public override Version Version { get; } = new Version(1, 5, 1);
 
         public override void OnEnabled()
         {
