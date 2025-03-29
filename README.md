@@ -8,7 +8,7 @@
 
 ## Deadman Switch Remover
 
-- **Deadman Switch Remover:** Removes the Deadman Switch in the game or prevents it from activating until a certain amount of time has passed.
+- **Deadman Switch Remover:** Remove the deadmen switch in the game completely
 - **Deadman Switch Delayer:** Prevents the DeadMan Switch from turning on before a certain number of minutes without completely removing it.
 - **Dms and Auto Warhead conflict prevention** It prevents the two warheads from overlapping.
 
