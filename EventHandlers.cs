@@ -26,7 +26,10 @@ namespace DeadmanSwitchRemover
                 ev.IsAllowed = false;
                 Log.Debug("Automatic warhead has already started, dms is disabled");
                 return;
-            }          
+            }
+
+            if (plugin.Config.MinimumStartMinutes== 0)
+                return;
 
             if ( Round.ElapsedTime.TotalMinutes < plugin.Config.MinimumStartMinutes )
             {
