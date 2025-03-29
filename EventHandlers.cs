@@ -1,4 +1,5 @@
-﻿using Exiled.API.Features;
+﻿using System;
+using Exiled.API.Features;
 using Exiled.Events.EventArgs.Warhead;
 
 namespace DeadmanSwitchRemover
@@ -7,15 +8,32 @@ namespace DeadmanSwitchRemover
     {
         public readonly Plugin plugin;
         public EventHandlers(Plugin plugin) => this.plugin = plugin;
-        public void DeadmenSwitchInit (DeadmanSwitchInitiatingEventArgs ev)
+
+        public void OnWarheadStart(StartingEventArgs ev)
         {
-            if (Round.ElapsedTime.TotalMinutes >= plugin.Config.DelayMinutes)
+            if ( ev.IsAuto && DeadmanSwitch._dmsActive)
+            {
+                ev.IsAllowed = false;   
+                Log.Debug("Auto warhead tried to start when dms was open auto canceled");
+            }
+        }
+
+        public void DeadmenSwitchInit(DeadmanSwitchInitiatingEventArgs ev)
+        {
+            if ( Warhead.IsInProgress && Warhead.IsLocked)
+            {
+                StaticUnityMethods.OnUpdate -= (Action)DeadmanSwitch.OnUpdate;
+                ev.IsAllowed = false;
+                Log.Debug("Automatic warhead has already started, dms is disabled");
                 return;
+            }          
 
-            ev.IsAllowed = false;
-            DeadmanSwitch._dmsTime += 5f;// I know i can just reject it but this time the event is triggered 35 times per second and the logs accumulate too much
-            Log.Debug("DMS has been delayed for 5 seconds because min required time is " + plugin.Config.DelayMinutes);
-
+            if ( Round.ElapsedTime.TotalMinutes < plugin.Config.MinimumStartMinutes )
+            {
+                ev.IsAllowed = false;
+                DeadmanSwitch._dmsTime += 5f;
+                Log.Debug("DMS has been delayed 5 seconds");
+            }
         }
     }
 }

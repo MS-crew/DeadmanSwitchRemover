@@ -9,7 +9,7 @@ namespace DeadmanSwitchRemover
         public bool Debug { get; set; } = false;
         [Description("Should DMS be permanently disabled?")]
         public bool PermenantlyRemove { get; set; } = true;
-        [Description("How many minutes into the round should DMS remain disabled?")]
-        public int DelayMinutes { get; set; } = 15;
+        [Description("Deadman switch should wait at least how many minutes to start? ")]
+        public int MinimumStartMinutes { get; set; } = 15;
     }
 }
